@@ -1,0 +1,20 @@
+{
+ "ios": {
+  "en-US": {"name":"Dropmelo: Merge Games","subtitle":"Cute Fruit Drop & Ball Puzzle",
+   "keywords":"watermelon,2048,stack,chain,combo,physics,match,arcade,combine,casual,relax,juice,cake,score",
+   "promo":"One good drop can start a chain! Merge cute pieces across 8 themes, build combos and beat your best score. Play offline anytime."},
+  "tr": {"name":"Dropmelo: Birleştirme Oyunu","subtitle":"Karpuz Oyunu, Meyve Bulmaca",
+   "keywords":"merge,fruit merge,bulmaca oyunları,zincir,kombo,skor,rekor,fizik,düşür,internetsiz,zeka,puzzle",
+   "promo":"Tek hamle bir birleşme zinciri başlatabilir! 8 farklı temada parçaları birleştir, kombo yap ve rekorunu kır. İnternetsiz de oyna."},
+  "es-ES": {"name":"Dropmelo: Juego de Fusionar","subtitle":"Puzle de fusionar frutas",
+   "promo":"¡Una buena caída puede iniciar una cadena! Fusiona piezas en 8 temas, haz combos y supera tu récord. Juega sin conexión."},
+  "ru": {"name":"Dropmelo: Merge Game","subtitle":"Головоломка: соедини фрукты",
+   "promo":"Один точный бросок запускает цепочку! Соединяй фигуры в 8 темах, делай комбо и бей свой рекорд. Играй без интернета."},
+  "ro": {"name":"Dropmelo: Merge Game","subtitle":"Puzzle cu fructe de unit",
+   "promo":"O singură mutare bună pornește un lanț! Unește piese în 8 teme, fă combo-uri și bate-ți recordul. Joacă și offline."}
+ },
+ "play": {
+  "en-US": {"title":"Dropmelo: Merge Games","short":"Drop and merge cute pieces! A fruit merge puzzle with combos and high scores."},
+  "tr-TR": {"title":"Dropmelo: Birleştirme Oyunu","short":"Meyve birleştirme oyunu! Parçaları düşür, birleştir, kombo yap ve rekor kır."}
+ }
+}

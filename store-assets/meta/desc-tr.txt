@@ -1,0 +1,19 @@
+İyi bir düşüş peş peşe birleşmeleri başlatabilir. Parçayı nereye bırakacağını seç, aynı parçaları birleştirip büyüt ve bir sonraki hamlene yer aç.
+
+Dropmelo, gerçek fizikle çalışan rahatlatıcı bir birleştirme oyunu. Bırak, eşleştir, birleştir: iki aynı parça bir üst parçaya dönüşür. Zinciri sürdür, kombo yap ve alan dolmadan rekorunu yukarı taşı.
+
+NEDEN DROPMELO?
+• Öğrenmesi kolay: dokun, bırak; parçalar yuvarlanır, sekip birleşir
+• 8 tema, tek oyun: Tatlı Kafe, Mutfak, Bilgisayar, Okul, Araba Garajı, Deniz Akvaryum, Çiçek Bahçesi ve Hücre
+• Zincirleme kombolar: tek akıllı hamle art arda birleşmeler başlatır
+• Jokerler: Bomba, Büyütme ve Sallama ile kalabalık tahtayı rahatlat
+• Kazandığın yıldızlarla odalarını süsle
+• Günlük ödüller, görevler ve süreli Merge Rush etkinliği
+• Liderlik tablosu: rekorunun kaçıncı sırada olduğunu gör
+• İnternetsiz oyna: oyuna başlamak için bağlantı gerekmez
+
+Meyve birleştirme, karpuz oyunu, top birleştirme ya da 2048 tarzı bulmaca oyunlarını seviyorsan Dropmelo tam sana göre. Alan dolmadan ne kadar yükseğe çıkabilirsin?
+
+Dropmelo ücretsizdir; isteğe bağlı uygulama içi satın almalar ve reklamlar içerir.
+Kullanım Koşulları: https://h4ll1l.github.io/dropmelo/terms/
+Gizlilik Politikası: https://h4ll1l.github.io/dropmelo/privacy/
