@@ -1,0 +1,14 @@
+{
+ "ios": {
+  "en-US": {"name":"Hidden Corner: Find It","subtitle":"Seek & Find Hidden Objects",
+   "keywords":"scavenger,hunt,i spy,search,puzzle,seaside,map,offline,cozy,picture,explore,zoom,game,games,spot",
+   "promo":"A brass bell, a blue crab, a market key. Explore illustrated seaside maps and see what you can spot."},
+  "tr": {"name":"Hidden Corner: Gizli Nesneler","subtitle":"Nesne Bul, Haritayı Keşfet",
+   "keywords":"hidden objects,hidden object games,find it,bulmaca,arama,sahil,çevrimdışı,internetsiz,eşya,keşif",
+   "promo":"Pirinç çan, mavi yengeç, pazar anahtarı. Çizimli sahil haritalarını keşfet ve köşelerde saklanan nesneleri bul."}
+ },
+ "play": {
+  "en-US": {"title":"Hidden Corner: Find Objects","short":"Find hidden objects in illustrated seaside maps. Zoom in and spot each one."},
+  "tr-TR": {"title":"Hidden Corner: Gizli Nesneler","short":"Gizli nesneleri bul, çizimli sahil haritalarını yakınlaştır ve keşfet."}
+ }
+}
