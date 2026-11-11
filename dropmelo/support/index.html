@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dropmelo Support</title>
+<meta name="description" content="Help and contact for Dropmelo.">
+<meta name="theme-color" content="#c4136f">
+<link rel="icon" href="../../support/icon.png">
+<link rel="apple-touch-icon" href="../../support/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --c1:#c4136f; --c2:#e8358f; --cream:#fff3e0; --bg:#fff7ef; --card:#fff; --text:#3b1d2c; --muted:#8a6576; --line:#f6dfe8; --deep:#8e0b52; --shadow:rgba(142,11,82,.35); }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1a0d14; --card:#26131d; --text:#fbe9f1; --muted:#c79aaf; --line:#3c1e2d; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 "Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+  .hero { color:var(--cream); text-align:center; padding:calc(20px + env(safe-area-inset-top)) 16px 90px;
+    background: radial-gradient(90% 70% at 15% 0%, rgba(232,53,143,.9) 0%, transparent 70%), linear-gradient(135deg, #c4136f 0%, #a0279f 60%, #7a3fd0 100%); }
+  .topbar { max-width:720px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
+  .back { color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; opacity:.9; }
+  .lang { display:inline-flex; background:rgba(255,255,255,.16); border-radius:999px; padding:4px; }
+  .lang button { font:700 13px "Fredoka",sans-serif; border:0; cursor:pointer; color:var(--cream); background:transparent; padding:6px 14px; border-radius:999px; }
+  .lang button[aria-pressed="true"] { background:var(--cream); color:var(--c1); }
+  .hero img { width:84px; height:84px; border-radius:20px; margin:22px auto 12px; display:block; box-shadow:0 14px 28px -10px rgba(0,0,0,.5); }
+  h1 { font:700 32px/1.15 "Fredoka",sans-serif; margin:0; }
+  .updated { opacity:.85; font-weight:600; margin:6px 0 0; }
+  main { max-width:720px; margin:-60px auto 0; padding:0 16px calc(48px + env(safe-area-inset-bottom)); }
+  article { background:var(--card); border:1px solid var(--line); border-radius:26px; padding:26px 22px; box-shadow:0 18px 40px -18px var(--shadow); }
+  h2 { font:700 19px "Fredoka",sans-serif; margin:26px 0 6px; color:var(--c2); }
+  h2:first-child { margin-top:0; }
+  p, li { color:var(--text); }
+  ul { padding-left:20px; margin:8px 0; }
+  li { margin:4px 0; }
+  a { color:var(--c2); }
+  footer { text-align:center; margin-top:30px; color:var(--muted); font-size:14px; }
+  footer a { color:inherit; }
+  .btn { display:inline-block; text-decoration:none; font:700 17px "Fredoka",sans-serif; color:#fff; padding:14px 26px; border-radius:16px;
+    background:linear-gradient(180deg,var(--c2),var(--c1)); box-shadow:0 5px 0 var(--deep); }
+  .center { text-align:center; }
+  details { border:1px solid var(--line); border-radius:16px; margin:10px 0; padding:0 16px; }
+  summary { cursor:pointer; font-weight:700; padding:14px 0; }
+  details p { margin:0 0 14px; color:var(--muted); }
+  [data-lang] { display:none; }
+  html[lang="en"] [data-lang="en"], html[lang="tr"] [data-lang="tr"] { display:revert; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="topbar">
+    <a class="back" href="../../"><span data-lang="en">← Home</span><span data-lang="tr">← Ana sayfa</span></a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set="en">EN</button><button type="button" data-set="tr">TR</button>
+    </div>
+  </div>
+  <img src="../../support/icon.png" alt="Dropmelo">
+  <h1 data-lang="en">Player Support</h1>
+  <h1 data-lang="tr">Oyuncu Desteği</h1>
+  <p class="updated" data-lang="en">Dropmelo · Help &amp; contact</p>
+  <p class="updated" data-lang="tr">Dropmelo · Yardım ve iletişim</p>
+</header>
+<main>
+<article id="en" data-lang="en">
+<div class="center"><p>Write to us with your device model, OS version and what happened. A screenshot helps a lot. We reply within 1–2 days (English or Turkish).</p><p><a class="btn" href="mailto:ihalildemircioglu@gmail.com?subject=Dropmelo%20Support">Email support</a></p><p><a href="mailto:ihalildemircioglu@gmail.com">ihalildemircioglu@gmail.com</a></p></div><h2>Common questions</h2><details><summary>Does the game work offline?</summary><p>Yes, you can play without a connection. Leaderboards, ads, purchases and sync need internet.</p></details>
+<details><summary>I bought something but didn't get it / restoring purchases</summary><p>Reopen the game while connected to the internet. You can also use Restore Purchases in Settings (with the same Apple ID or Google account). Still missing? Email us with your purchase receipt.</p></details>
+<details><summary>How do lives / energy work?</summary><p>Playing a run uses energy. It refills over time, and you can also get energy from rewards, quests and rewarded videos.</p></details>
+<details><summary>How do I change my leaderboard name?</summary><p>Open Profile and edit your nickname and avatar. The leaderboard updates your name on existing entries. Inappropriate names are filtered.</p></details>
+<details><summary>A video didn't give my reward</summary><p>Rewards are given when the video is watched to the end. If no video is available, try again a little later.</p></details>
+<details><summary>Keeping progress on a new phone</summary><p>Sign in from Profile with Apple or Google on both devices. Your progress syncs to your account.</p></details>
+<details><summary>Deleting my data</summary><p>Email us with the subject "Delete my data" and your nickname, and we will remove it. See the <a href="../privacy/">Privacy Policy</a>.</p></details>
+<details><summary>How do I report a bug?</summary><p>Email us (or use feedback in the app) with your device model, OS and app version, what you did and what happened; a screenshot or screen recording helps.</p></details>
+</article>
+<article id="tr" data-lang="tr">
+<div class="center"><p>Cihaz modelini, işletim sistemi sürümünü ve ne olduğunu yaz. Ekran görüntüsü eklersen çok yardımcı olur. 1–2 gün içinde yanıtlarız (İngilizce veya Türkçe).</p><p><a class="btn" href="mailto:ihalildemircioglu@gmail.com?subject=Dropmelo%20Support">Bize e-posta at</a></p><p><a href="mailto:ihalildemircioglu@gmail.com">ihalildemircioglu@gmail.com</a></p></div><h2>Sık sorulanlar</h2><details><summary>Oyun internetsiz çalışır mı?</summary><p>Evet, bağlantı olmadan oynayabilirsin. Liderlik tablosu, reklamlar, satın almalar ve eşitleme için internet gerekir.</p></details>
+<details><summary>Satın aldım ama gelmedi / satın almaları geri yükleme</summary><p>İnternete bağlıyken oyunu yeniden aç. Ayarlar'daki Satın Almaları Geri Yükle seçeneğini de (aynı Apple ID veya Google hesabıyla) kullanabilirsin. Hâlâ gelmediyse satın alma makbuzunla bize e-posta at.</p></details>
+<details><summary>Can / enerji nasıl çalışır?</summary><p>Her oyun enerji harcar. Enerji zamanla dolar; ödüllerden, görevlerden ve ödüllü videolardan da enerji kazanabilirsin.</p></details>
+<details><summary>Liderlik tablosu adımı nasıl değiştiririm?</summary><p>Profil'i açıp takma adını ve avatarını düzenle. Liderlik tablosu mevcut kayıtlarındaki adı günceller. Uygunsuz adlar filtrelenir.</p></details>
+<details><summary>Reklam izledim, ödül gelmedi</summary><p>Ödül, video sonuna kadar izlenince verilir. Video çıkmıyorsa biraz sonra tekrar dene.</p></details>
+<details><summary>Yeni telefonda ilerlemem</summary><p>Profil ekranından iki cihazda da Apple veya Google ile giriş yap. İlerlemen hesabına eşitlenir.</p></details>
+<details><summary>Verilerimi silmek</summary><p>"Verilerimi sil" konusuyla ve takma adınla bize e-posta at, verilerini silelim. <a href="../privacy/">Gizlilik Politikası</a>'na bak.</p></details>
+<details><summary>Hata nasıl bildirilir?</summary><p>Bize e-posta at (veya uygulamadaki geri bildirimi kullan): cihaz modeli, işletim sistemi ve uygulama sürümü, ne yaptığın ve ne olduğu; ekran görüntüsü veya ekran kaydı çok yardımcı olur.</p></details>
+</article>
+<footer><a href="../privacy/"><span data-lang="en">Privacy Policy</span><span data-lang="tr">Gizlilik Politikası</span></a> · <a href="../terms/"><span data-lang="en">Terms of Use</span><span data-lang="tr">Kullanım Koşulları</span></a><br>© 2026 Dropmelo · İbrahim Halil Demircioğlu</footer>
+</main>
+<script>
+(function () {
+  var root = document.documentElement;
+  var T = {en: 'Dropmelo Support', tr: 'Dropmelo Destek'};
+  function set(l) {
+    root.lang = l;
+    document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false'); });
+    document.title = T[l];
+  }
+  var saved = null; try { saved = localStorage.getItem('lang'); } catch (e) {}
+  var nav = (navigator.language || 'en').toLowerCase();
+  var h = (location.hash || '').replace('#', '');
+  set(h === 'en' || h === 'tr' ? h : (saved || (nav.indexOf('tr') === 0 ? 'tr' : 'en')));
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.addEventListener('click', function () { set(b.dataset.set); try { localStorage.setItem('lang', b.dataset.set); } catch (e) {} });
+  });
+  window.addEventListener('hashchange', function () { var x = location.hash.replace('#', ''); if (x === 'en' || x === 'tr') set(x); });
+})();
+</script>
+</body>
+</html>

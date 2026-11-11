@@ -7,33 +7,41 @@
 <meta name="description" content="Privacy policy for the Dropmelo mobile game.">
 <meta name="theme-color" content="#c4136f">
 <link rel="icon" href="../../support/icon.png">
+<link rel="apple-touch-icon" href="../../support/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --magenta:#c4136f; --magenta-2:#e8358f; --cream:#fff3e0; --bg:#fff7ef; --card:#fff; --text:#3b1d2c; --muted:#8a6576; --line:#f6dfe8; }
+  :root { --c1:#c4136f; --c2:#e8358f; --cream:#fff3e0; --bg:#fff7ef; --card:#fff; --text:#3b1d2c; --muted:#8a6576; --line:#f6dfe8; --deep:#8e0b52; --shadow:rgba(142,11,82,.35); }
   @media (prefers-color-scheme: dark) { :root { --bg:#1a0d14; --card:#26131d; --text:#fbe9f1; --muted:#c79aaf; --line:#3c1e2d; } }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 "Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
   .hero { color:var(--cream); text-align:center; padding:calc(20px + env(safe-area-inset-top)) 16px 90px;
-    background: radial-gradient(90% 70% at 15% 0%, rgba(232,53,143,.9) 0%, transparent 70%), linear-gradient(135deg, var(--magenta) 0%, #a0279f 60%, #7a3fd0 100%); }
+    background: radial-gradient(90% 70% at 15% 0%, rgba(232,53,143,.9) 0%, transparent 70%), linear-gradient(135deg, #c4136f 0%, #a0279f 60%, #7a3fd0 100%); }
   .topbar { max-width:720px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
   .back { color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; opacity:.9; }
   .lang { display:inline-flex; background:rgba(255,255,255,.16); border-radius:999px; padding:4px; }
   .lang button { font:700 13px "Fredoka",sans-serif; border:0; cursor:pointer; color:var(--cream); background:transparent; padding:6px 14px; border-radius:999px; }
-  .lang button[aria-pressed="true"] { background:var(--cream); color:var(--magenta); }
-  .hero img { width:84px; height:84px; border-radius:20px; margin:22px auto 12px; display:block; box-shadow:0 14px 28px -10px rgba(40,0,40,.6); }
+  .lang button[aria-pressed="true"] { background:var(--cream); color:var(--c1); }
+  .hero img { width:84px; height:84px; border-radius:20px; margin:22px auto 12px; display:block; box-shadow:0 14px 28px -10px rgba(0,0,0,.5); }
   h1 { font:700 32px/1.15 "Fredoka",sans-serif; margin:0; }
   .updated { opacity:.85; font-weight:600; margin:6px 0 0; }
   main { max-width:720px; margin:-60px auto 0; padding:0 16px calc(48px + env(safe-area-inset-bottom)); }
-  article { background:var(--card); border:1px solid var(--line); border-radius:26px; padding:26px 22px; box-shadow:0 18px 40px -18px rgba(142,11,82,.35); }
-  h2 { font:700 19px "Fredoka",sans-serif; margin:26px 0 6px; color:var(--magenta-2); }
+  article { background:var(--card); border:1px solid var(--line); border-radius:26px; padding:26px 22px; box-shadow:0 18px 40px -18px var(--shadow); }
+  h2 { font:700 19px "Fredoka",sans-serif; margin:26px 0 6px; color:var(--c2); }
   h2:first-child { margin-top:0; }
   p, li { color:var(--text); }
   ul { padding-left:20px; margin:8px 0; }
   li { margin:4px 0; }
-  a { color:var(--magenta-2); }
+  a { color:var(--c2); }
   footer { text-align:center; margin-top:30px; color:var(--muted); font-size:14px; }
+  footer a { color:inherit; }
+  .btn { display:inline-block; text-decoration:none; font:700 17px "Fredoka",sans-serif; color:#fff; padding:14px 26px; border-radius:16px;
+    background:linear-gradient(180deg,var(--c2),var(--c1)); box-shadow:0 5px 0 var(--deep); }
+  .center { text-align:center; }
+  details { border:1px solid var(--line); border-radius:16px; margin:10px 0; padding:0 16px; }
+  summary { cursor:pointer; font-weight:700; padding:14px 0; }
+  details p { margin:0 0 14px; color:var(--muted); }
   [data-lang] { display:none; }
   html[lang="en"] [data-lang="en"], html[lang="tr"] [data-lang="tr"] { display:revert; }
 </style>
@@ -41,7 +49,7 @@
 <body>
 <header class="hero">
   <div class="topbar">
-    <a class="back" href="../../support/"><span data-lang="en">← Support</span><span data-lang="tr">← Destek</span></a>
+    <a class="back" href="../../"><span data-lang="en">← Home</span><span data-lang="tr">← Ana sayfa</span></a>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-set="en">EN</button><button type="button" data-set="tr">TR</button>
     </div>
@@ -52,54 +60,58 @@
   <p class="updated" data-lang="en">Dropmelo · Last updated: November 11, 2026</p>
   <p class="updated" data-lang="tr">Dropmelo · Son güncelleme: 11 Kasım 2026</p>
 </header>
-
 <main>
-<article data-lang="en">
+<article id="en" data-lang="en">
+
   <h2>Overview</h2>
-  <p>This policy explains what data Dropmelo (formerly "Drop &amp; Merge") collects, why, and how third-party services may process it. You can play without creating an account, and the game does not ask for your name, phone number or home address.</p>
+  <p>This policy explains what data Dropmelo (formerly "Drop &amp; Merge") collects, why, and how third-party services process it. The game is published by İbrahim Halil Demircioğlu, an individual developer ("we"). You can play without creating an account, and the game does not ask for your real name, phone number or home address.</p>
 
   <h2>Data we collect</h2>
   <ul>
-    <li>A device ID or app-generated identifier.</li>
-    <li>Technical information: platform, OS version, app version, last seen time.</li>
-    <li>Gameplay data: scores, game mode, run duration, merges, highest level, coins, quests and progress.</li>
-    <li>Leaderboard name and avatar you choose.</li>
-    <li>If you sign in with Apple or Google: an account identifier used to sync your progress, and the email address the provider shares (Apple may share a private relay address).</li>
-    <li>Purchase records needed to deliver in-app purchases. Payments are handled by Apple or Google; we never see your card details.</li>
-    <li>Ad impressions and interactions.</li>
-    <li>Usage analytics and diagnostics such as crashes, errors and performance.</li>
+    <li><strong>Identifiers:</strong> a random device/player ID generated by the app (and an anonymous Supabase session), used to tie progress, scores and purchases to your device. If you opt in to ad personalisation on iOS, the advertising identifier (IDFA) may be used by the ad SDK.</li>
+    <li><strong>Device and technical information:</strong> platform, OS version, app version, last-seen time, language, time zone and connectivity state. Our service providers also see your IP address when your device connects to them.</li>
+    <li><strong>Gameplay data:</strong> scores, game mode, run duration, merges, highest level, coins, jokers, energy, quests, daily rewards and progression.</li>
+    <li><strong>Profile data you choose:</strong> a leaderboard nickname (screened by a profanity filter) and an avatar. These are public to other players on leaderboards, and to friends and duel opponents.</li>
+    <li><strong>Social features:</strong> a friend code, friend requests, friend lists and duel challenges between players.</li>
+    <li><strong>Sign-in (optional):</strong> if you sign in with Apple or Google, an account identifier and the email address the provider shares (Apple may share a private relay address), used to sync progress.</li>
+    <li><strong>Purchases:</strong> product IDs and purchase receipts/tokens needed to verify and deliver in-app purchases. Payments are handled by Apple or Google; we never see your card details.</li>
+    <li><strong>Push notification token:</strong> if you allow notifications, a Firebase Cloud Messaging token is stored on our server so we can send reminders, rewards and social alerts. Local notifications are scheduled on your device.</li>
+    <li><strong>Messages you send us:</strong> text you submit through in-app feedback, including limited app context (such as version and device type).</li>
+    <li><strong>Ads data:</strong> ad impressions, clicks and ad-loading diagnostics.</li>
+    <li><strong>Analytics and diagnostics:</strong> in-app events, crashes, errors and performance data (Firebase Analytics, Firebase Crashlytics and our own Supabase event tables).</li>
   </ul>
 
   <h2>How we use data</h2>
   <ul>
-    <li>To save progress, sync it across devices, and show leaderboards.</li>
-    <li>To deliver purchases and rewards.</li>
+    <li>To save progress, sync it across devices, and show leaderboards, friends and duels.</li>
+    <li>To deliver purchases and rewards and to restore purchases.</li>
     <li>To show and measure ads.</li>
+    <li>To send notifications you have allowed.</li>
     <li>To understand how the game is played, fix bugs and improve balance.</li>
     <li>To prevent fraud, cheating and abuse.</li>
   </ul>
 
-  <h2>Advertising</h2>
-  <p>The game shows ads through Google AdMob. AdMob may process advertising IDs, device information and ad interaction data to serve and measure ads and to prevent fraud. On iOS you can allow or deny tracking from the system prompt; on both platforms you can reset or limit your advertising ID in device settings. Where required (for example in the EEA and UK), a consent message is shown before personalised ads.</p>
+  <h2>Advertising and tracking</h2>
+  <p>The game shows ads through Google AdMob. AdMob may process advertising IDs, device information and ad interaction data to serve and measure ads and to prevent fraud. On iOS, the system App Tracking Transparency prompt lets you allow or deny tracking, and you can change this at any time in Settings. On both platforms you can reset or limit your advertising ID in device settings. Where required (for example in the EEA and UK), Google's consent message is shown before personalised ads. We do not sell your data.</p>
 
   <h2>Third-party services</h2>
   <ul>
     <li><a href="https://policies.google.com/privacy">Google AdMob</a> – ads</li>
-    <li><a href="https://firebase.google.com/support/privacy">Firebase Analytics &amp; Crashlytics</a> – analytics and crash reports</li>
-    <li><a href="https://supabase.com/privacy">Supabase</a> – leaderboards, progress sync and cloud storage</li>
+    <li><a href="https://firebase.google.com/support/privacy">Firebase Analytics, Crashlytics and Cloud Messaging</a> – analytics, crash reports, push notifications</li>
+    <li><a href="https://supabase.com/privacy">Supabase</a> – leaderboards, progress sync, friends/duels and cloud storage</li>
     <li>Sign in with Apple and Google Sign-In – optional login</li>
     <li>App Store and Google Play billing – purchases</li>
   </ul>
-  <p>These services process data under their own privacy policies.</p>
+  <p>These services process data under their own privacy policies and may transfer data internationally.</p>
 
   <h2>Sharing</h2>
-  <p>We do not sell personal data. Data is shared only with the service providers above, when needed to run the game, or when required by law.</p>
+  <p>We do not sell personal data. Data is shared only with the service providers above, with other players where you chose to make it public (nickname, avatar, score), when needed to run the game, or when required by law.</p>
 
   <h2>Retention</h2>
-  <p>Progress and leaderboard records are kept while these features exist or until you ask us to delete them. Diagnostic data is kept only as long as needed to fix and secure the app.</p>
+  <p>Progress, purchase and leaderboard records are kept while these features exist or until you ask us to delete them. Diagnostic and analytics data is kept only as long as needed to fix, secure and improve the app.</p>
 
-  <h2>Your choices and deletion</h2>
-  <p>You can play offline, skip signing in, and limit ad tracking in your device settings. To access or delete your data, email <a href="mailto:ihalildemircioglu@gmail.com?subject=Dropmelo%20-%20Delete%20my%20data">ihalildemircioglu@gmail.com</a> with the subject "Delete my data". Uninstalling the app removes data stored on your device.</p>
+  <h2>Your choices and data deletion</h2>
+  <p>You can play offline, skip signing in, deny notifications and tracking, and limit ad tracking in your device settings. To access, correct or delete your data (including your leaderboard entries and profile), email <a href="mailto:ihalildemircioglu@gmail.com?subject=Dropmelo%20-%20Delete%20my%20data">ihalildemircioglu@gmail.com</a> with the subject "Delete my data" from the device or account email, and include your nickname. We will respond within 30 days. Uninstalling the app removes data stored on your device. Depending on where you live (for example under the GDPR, UK GDPR, Turkish KVKK or CCPA), you may have additional rights, which you can exercise through the same address.</p>
 
   <h2>Children</h2>
   <p>Dropmelo is not directed at children under 13 and we do not knowingly collect personal information from them. If you believe a child has provided data, contact us and we will delete it.</p>
@@ -112,54 +124,59 @@
 
   <h2>Contact</h2>
   <p>İbrahim Halil Demircioğlu · <a href="mailto:ihalildemircioglu@gmail.com">ihalildemircioglu@gmail.com</a></p>
-</article>
 
-<article data-lang="tr">
+</article>
+<article id="tr" data-lang="tr">
+
   <h2>Genel bakış</h2>
-  <p>Bu politika, Dropmelo'nun (eski adıyla "Drop &amp; Merge") hangi verileri neden topladığını ve üçüncü taraf hizmetlerin bunları nasıl işleyebileceğini açıklar. Hesap açmadan oynayabilirsin; oyun adını, telefon numaranı veya adresini istemez.</p>
+  <p>Bu politika, Dropmelo'nun (eski adıyla "Drop &amp; Merge") hangi verileri neden topladığını ve üçüncü taraf hizmetlerin bunları nasıl işlediğini açıklar. Oyunu bireysel geliştirici İbrahim Halil Demircioğlu ("biz") yayımlar. Hesap açmadan oynayabilirsin; oyun gerçek adını, telefon numaranı veya adresini istemez.</p>
 
   <h2>Toplanan veriler</h2>
   <ul>
-    <li>Cihaz kimliği veya uygulamanın oluşturduğu bir tanımlayıcı.</li>
-    <li>Teknik bilgiler: platform, işletim sistemi sürümü, uygulama sürümü, son görülme zamanı.</li>
-    <li>Oyun verileri: skorlar, oyun modu, oyun süresi, birleştirmeler, en yüksek seviye, coin, görevler ve ilerleme.</li>
-    <li>Seçtiğin liderlik tablosu adı ve avatarı.</li>
-    <li>Apple veya Google ile giriş yaparsan: ilerlemeni eşitlemek için hesap kimliği ve sağlayıcının paylaştığı e-posta adresi (Apple gizli bir yönlendirme adresi paylaşabilir).</li>
-    <li>Uygulama içi satın almaları teslim etmek için gereken kayıtlar. Ödemeyi Apple veya Google alır; kart bilgilerini hiçbir zaman görmeyiz.</li>
-    <li>Reklam gösterimleri ve etkileşimleri.</li>
-    <li>Kullanım analizleri ve çökme, hata, performans gibi tanılama verileri.</li>
+    <li><strong>Tanımlayıcılar:</strong> uygulamanın oluşturduğu rastgele bir cihaz/oyuncu kimliği (ve anonim bir Supabase oturumu); ilerleme, skor ve satın almaları cihazına bağlamak için kullanılır. iOS'ta reklam kişiselleştirmeye izin verirsen reklam kimliği (IDFA) reklam SDK'sı tarafından kullanılabilir.</li>
+    <li><strong>Cihaz ve teknik bilgiler:</strong> platform, işletim sistemi sürümü, uygulama sürümü, son görülme zamanı, dil, saat dilimi ve bağlantı durumu. Cihazın hizmet sağlayıcılarımıza bağlandığında IP adresin de onlar tarafından görülür.</li>
+    <li><strong>Oyun verileri:</strong> skorlar, oyun modu, oyun süresi, birleştirmeler, en yüksek seviye, coin, jokerler, enerji, görevler, günlük ödüller ve ilerleme.</li>
+    <li><strong>Seçtiğin profil verileri:</strong> liderlik tablosu takma adı (küfür filtresinden geçer) ve avatar. Bunlar liderlik tablosunda diğer oyunculara, arkadaşlarına ve düello rakiplerine açıktır.</li>
+    <li><strong>Sosyal özellikler:</strong> arkadaş kodu, arkadaşlık istekleri, arkadaş listesi ve oyuncular arası düello davetleri.</li>
+    <li><strong>Giriş (isteğe bağlı):</strong> Apple veya Google ile giriş yaparsan, ilerlemeni eşitlemek için hesap kimliği ve sağlayıcının paylaştığı e-posta adresi (Apple gizli bir yönlendirme adresi paylaşabilir).</li>
+    <li><strong>Satın almalar:</strong> uygulama içi satın almaları doğrulamak ve teslim etmek için ürün kimlikleri ve makbuz/jeton bilgileri. Ödemeyi Apple veya Google alır; kart bilgilerini hiçbir zaman görmeyiz.</li>
+    <li><strong>Bildirim jetonu:</strong> bildirimlere izin verirsen, hatırlatma, ödül ve sosyal bildirimler gönderebilmemiz için Firebase Cloud Messaging jetonu sunucumuzda saklanır. Yerel bildirimler cihazında planlanır.</li>
+    <li><strong>Bize gönderdiğin mesajlar:</strong> uygulama içi geri bildirimle yazdığın metin ve sınırlı uygulama bilgisi (sürüm, cihaz türü gibi).</li>
+    <li><strong>Reklam verileri:</strong> reklam gösterimleri, tıklamalar ve reklam yükleme tanılamaları.</li>
+    <li><strong>Analiz ve tanılama:</strong> uygulama içi olaylar, çökmeler, hatalar ve performans verileri (Firebase Analytics, Firebase Crashlytics ve kendi Supabase olay tablolarımız).</li>
   </ul>
 
   <h2>Verileri nasıl kullanıyoruz</h2>
   <ul>
-    <li>İlerlemeni kaydetmek, cihazlar arasında eşitlemek ve liderlik tablosunu göstermek için.</li>
-    <li>Satın almaları ve ödülleri teslim etmek için.</li>
+    <li>İlerlemeni kaydetmek, cihazlar arasında eşitlemek; liderlik tablosu, arkadaşlar ve düelloları göstermek için.</li>
+    <li>Satın almaları ve ödülleri teslim etmek ve satın almaları geri yüklemek için.</li>
     <li>Reklam göstermek ve ölçmek için.</li>
+    <li>İzin verdiğin bildirimleri göndermek için.</li>
     <li>Oyunun nasıl oynandığını anlamak, hataları düzeltmek ve dengeyi iyileştirmek için.</li>
     <li>Dolandırıcılığı, hileyi ve kötüye kullanımı önlemek için.</li>
   </ul>
 
-  <h2>Reklamlar</h2>
-  <p>Oyunda Google AdMob ile reklam gösterilir. AdMob, reklam sunmak, ölçmek ve dolandırıcılığı önlemek için reklam kimliğini, cihaz bilgilerini ve reklam etkileşim verilerini işleyebilir. iOS'ta takip iznini sistem penceresinden verebilir veya reddedebilirsin; iki platformda da reklam kimliğini cihaz ayarlarından sıfırlayabilir veya sınırlayabilirsin. Gerekli bölgelerde (örneğin AB ve Birleşik Krallık) kişiselleştirilmiş reklamdan önce onay mesajı gösterilir.</p>
+  <h2>Reklamlar ve takip</h2>
+  <p>Oyunda Google AdMob ile reklam gösterilir. AdMob, reklam sunmak, ölçmek ve dolandırıcılığı önlemek için reklam kimliğini, cihaz bilgilerini ve reklam etkileşim verilerini işleyebilir. iOS'ta App Tracking Transparency sistem penceresiyle takibe izin verebilir veya reddedebilir, bunu istediğin zaman Ayarlar'dan değiştirebilirsin. İki platformda da reklam kimliğini cihaz ayarlarından sıfırlayabilir veya sınırlayabilirsin. Gerekli bölgelerde (örneğin AEA ve Birleşik Krallık) kişiselleştirilmiş reklamdan önce Google'ın onay mesajı gösterilir. Verilerini satmayız.</p>
 
   <h2>Üçüncü taraf hizmetler</h2>
   <ul>
     <li><a href="https://policies.google.com/privacy">Google AdMob</a> – reklamlar</li>
-    <li><a href="https://firebase.google.com/support/privacy">Firebase Analytics ve Crashlytics</a> – analiz ve çökme raporları</li>
-    <li><a href="https://supabase.com/privacy">Supabase</a> – liderlik tablosu, ilerleme eşitleme ve bulut depolama</li>
+    <li><a href="https://firebase.google.com/support/privacy">Firebase Analytics, Crashlytics ve Cloud Messaging</a> – analiz, çökme raporları, anlık bildirimler</li>
+    <li><a href="https://supabase.com/privacy">Supabase</a> – liderlik tablosu, ilerleme eşitleme, arkadaşlar/düellolar ve bulut depolama</li>
     <li>Apple ile Giriş ve Google ile Giriş – isteğe bağlı oturum açma</li>
     <li>App Store ve Google Play ödeme sistemi – satın almalar</li>
   </ul>
-  <p>Bu hizmetler verileri kendi gizlilik politikalarına göre işler.</p>
+  <p>Bu hizmetler verileri kendi gizlilik politikalarına göre işler ve verileri yurt dışına aktarabilir.</p>
 
   <h2>Paylaşım</h2>
-  <p>Kişisel verileri satmayız. Veriler yalnızca yukarıdaki hizmet sağlayıcılarla, oyunu çalıştırmak için gerektiğinde veya yasal zorunluluk olduğunda paylaşılır.</p>
+  <p>Kişisel verileri satmayız. Veriler yalnızca yukarıdaki hizmet sağlayıcılarla, herkese açık yapmayı seçtiğin bilgiler (takma ad, avatar, skor) kapsamında diğer oyuncularla, oyunu çalıştırmak için gerektiğinde veya yasal zorunluluk olduğunda paylaşılır.</p>
 
   <h2>Saklama süresi</h2>
-  <p>İlerleme ve liderlik kayıtları bu özellikler var olduğu sürece veya sen silinmesini isteyene kadar saklanır. Tanılama verileri yalnızca uygulamayı düzeltmek ve korumak için gereken süre kadar tutulur.</p>
+  <p>İlerleme, satın alma ve liderlik kayıtları bu özellikler var olduğu sürece veya sen silinmesini isteyene kadar saklanır. Tanılama ve analiz verileri yalnızca uygulamayı düzeltmek, korumak ve geliştirmek için gereken süre kadar tutulur.</p>
 
   <h2>Seçimlerin ve veri silme</h2>
-  <p>İnternetsiz oynayabilir, giriş yapmadan devam edebilir ve reklam takibini cihaz ayarlarından sınırlayabilirsin. Verilerine erişmek veya silinmesini istemek için <a href="mailto:ihalildemircioglu@gmail.com?subject=Dropmelo%20-%20Verilerimi%20sil">ihalildemircioglu@gmail.com</a> adresine "Verilerimi sil" konusuyla e-posta at. Uygulamayı silmek, cihazında saklanan verileri kaldırır.</p>
+  <p>İnternetsiz oynayabilir, giriş yapmadan devam edebilir, bildirimleri ve takibi reddedebilir, reklam takibini cihaz ayarlarından sınırlayabilirsin. Verilerine (liderlik kayıtların ve profilin dahil) erişmek, düzeltmek veya silinmesini istemek için cihazına/hesabına bağlı e-posta adresinden <a href="mailto:ihalildemircioglu@gmail.com?subject=Dropmelo%20-%20Verilerimi%20sil">ihalildemircioglu@gmail.com</a> adresine "Verilerimi sil" konusuyla ve takma adını belirterek e-posta at. 30 gün içinde yanıtlarız. Uygulamayı silmek, cihazında saklanan verileri kaldırır. Yaşadığın yere göre (örneğin GDPR, Birleşik Krallık GDPR, KVKK veya CCPA kapsamında) ek haklarının olabilir; bunları aynı adresten kullanabilirsin.</p>
 
   <h2>Çocuklar</h2>
   <p>Dropmelo 13 yaş altındaki çocuklara yönelik değildir ve onlardan bilerek kişisel veri toplamayız. Bir çocuğun veri paylaştığını düşünüyorsan bize yaz, silelim.</p>
@@ -172,24 +189,27 @@
 
   <h2>İletişim</h2>
   <p>İbrahim Halil Demircioğlu · <a href="mailto:ihalildemircioglu@gmail.com">ihalildemircioglu@gmail.com</a></p>
-</article>
 
-<footer>© 2026 Dropmelo</footer>
+</article>
+<footer><a href="../terms/"><span data-lang="en">Terms of Use</span><span data-lang="tr">Kullanım Koşulları</span></a> · <a href="../support/"><span data-lang="en">Support</span><span data-lang="tr">Destek</span></a><br>© 2026 Dropmelo · İbrahim Halil Demircioğlu</footer>
 </main>
 <script>
 (function () {
   var root = document.documentElement;
+  var T = {en: 'Dropmelo Privacy Policy', tr: 'Dropmelo Gizlilik Politikası'};
   function set(l) {
     root.lang = l;
     document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false'); });
-    document.title = l === 'tr' ? 'Dropmelo Gizlilik Politikası' : 'Dropmelo Privacy Policy';
+    document.title = T[l];
   }
   var saved = null; try { saved = localStorage.getItem('lang'); } catch (e) {}
   var nav = (navigator.language || 'en').toLowerCase();
-  set(saved || (nav.indexOf('tr') === 0 ? 'tr' : 'en'));
+  var h = (location.hash || '').replace('#', '');
+  set(h === 'en' || h === 'tr' ? h : (saved || (nav.indexOf('tr') === 0 ? 'tr' : 'en')));
   document.querySelectorAll('.lang button').forEach(function (b) {
     b.addEventListener('click', function () { set(b.dataset.set); try { localStorage.setItem('lang', b.dataset.set); } catch (e) {} });
   });
+  window.addEventListener('hashchange', function () { var x = location.hash.replace('#', ''); if (x === 'en' || x === 'tr') set(x); });
 })();
 </script>
 </body>
