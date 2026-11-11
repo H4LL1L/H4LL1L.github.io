@@ -1,0 +1,25 @@
+{
+ "dropmelo": {
+  "ios": {
+   "en-US": {"name":"Dropmelo","subtitle":"Drop and Merge Puzzle","keywords":"stack,chain,combo,physics,match,high score,arcade,combine","promo":"One good drop can start a chain. Make room, build combos and see if you can beat your best score."},
+   "tr": {"name":"Dropmelo","subtitle":"Düşür ve Birleştir","keywords":"merge,drop,birleştirme oyunu,bulmaca,zincir,kombo,skor,rekor,fizik","promo":"Tek hamle bir birleşme zinciri başlatabilir. Alan aç, kombo yap ve kendi skorunu geç."},
+   "es-ES": {"name":"Dropmelo","subtitle":"Puzle de soltar y fusionar"},
+   "ru": {"name":"Dropmelo","subtitle":"Головоломка: брось и соедини"},
+   "ro": {"name":"Dropmelo","subtitle":"Puzzle: aruncă și unește"}
+  },
+  "play": {
+   "en-US": {"title":"Dropmelo","short":"Drop and merge matching pieces. Chain combos and beat your high score."},
+   "tr-TR": {"title":"Dropmelo","short":"Parçaları düşür, birleştir ve zincirleme kombolarla rekorunu kır."}
+  }
+ },
+ "hidden-corner": {
+  "ios": {
+   "en-US": {"name":"Hidden Corner","subtitle":"Find Hidden Objects","keywords":"scavenger,hunt,seek,spot,picture,puzzle,offline,cozy,map,search","promo":"A brass bell, a blue crab, a market key. Explore two illustrated seaside maps and see what you can spot."},
+   "tr": {"name":"Hidden Corner","subtitle":"Gizli Nesneleri Bul","keywords":"eşya,arama,bulmaca,harita,çizim,iskele,pazar,çevrimdışı,keşif","promo":"Pirinç çan, mavi yengeç, pazar anahtarı. İki çizimli sahil haritasını keşfet ve köşelerde saklanan nesneleri bul."}
+  },
+  "play": {
+   "en-US": {"title":"Hidden Corner","short":"Find hidden objects in illustrated seaside maps. Zoom in and spot each one."},
+   "tr-TR": {"title":"Hidden Corner","short":"Gizli nesneleri bul, çizimli sahil haritalarını yakınlaştır ve keşfet."}
+  }
+ }
+}
