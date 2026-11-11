@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dropmelo Support</title>
+<meta name="description" content="Help and contact for Dropmelo.">
+<style>
+  :root {
+    --bg: #fff8f0; --card: #ffffff; --text: #2b2118; --muted: #7a6a5c;
+    --accent: #ff7a3d; --accent-ink: #ffffff; --line: #f0e2d4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1b1612; --card: #262019; --text: #f6ece2; --muted: #b9a998; --accent: #ff8f5a; --accent-ink: #1b1612; --line: #3a3027; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 56px; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  h1 { font-size: 28px; margin: 0; }
+  .lang button { border: 1px solid var(--line); background: var(--card); color: var(--text);
+    padding: 6px 12px; border-radius: 999px; cursor: pointer; font-weight: 600; }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .lead { color: var(--muted); margin: 8px 0 28px; }
+  .contact { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; margin-bottom: 28px; }
+  .contact h2 { margin: 0 0 6px; font-size: 18px; }
+  .contact p { margin: 0 0 14px; color: var(--muted); }
+  .btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none;
+    font-weight: 700; padding: 12px 20px; border-radius: 12px; }
+  .mail { display: block; margin-top: 10px; color: var(--muted); font-size: 14px; word-break: break-all; }
+  h2.faq { font-size: 20px; margin: 0 0 12px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+  footer { margin-top: 36px; color: var(--muted); font-size: 14px; text-align: center; }
+  [data-lang] { display: none; }
+  html[lang="en"] [data-lang="en"], html[lang="tr"] [data-lang="tr"] { display: revert; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Dropmelo</h1>
+    <div class="lang">
+      <button type="button" data-set="en">EN</button>
+      <button type="button" data-set="tr">TR</button>
+    </div>
+  </header>
+
+  <p class="lead" data-lang="en">Need help? We usually reply within 1–2 days.</p>
+  <p class="lead" data-lang="tr">Yardıma mı ihtiyacın var? Genelde 1–2 gün içinde dönüyoruz.</p>
+
+  <section class="contact">
+    <h2 data-lang="en">Contact us</h2>
+    <h2 data-lang="tr">Bize yaz</h2>
+    <p data-lang="en">Please include your device model and what happened. A screenshot helps a lot.</p>
+    <p data-lang="tr">Lütfen cihaz modelini ve ne olduğunu yaz. Ekran görüntüsü çok yardımcı olur.</p>
+    <a class="btn" href="mailto:ihalildemircioglu@gmail.com?subject=Dropmelo%20Support">
+      <span data-lang="en">Email support</span><span data-lang="tr">E-posta gönder</span>
+    </a>
+    <span class="mail">ihalildemircioglu@gmail.com</span>
+  </section>
+
+  <h2 class="faq" data-lang="en">Frequently asked questions</h2>
+  <h2 class="faq" data-lang="tr">Sık sorulan sorular</h2>
+
+  <details>
+    <summary><span data-lang="en">Does the game work offline?</span><span data-lang="tr">Oyun internetsiz çalışır mı?</span></summary>
+    <p data-lang="en">Yes. You can play without a connection. Leaderboards, ads and purchases need internet.</p>
+    <p data-lang="tr">Evet. Bağlantı olmadan oynayabilirsin. Liderlik tablosu, reklamlar ve satın almalar için internet gerekir.</p>
+  </details>
+
+  <details>
+    <summary><span data-lang="en">I bought something but didn't receive it.</span><span data-lang="tr">Satın aldım ama gelmedi.</span></summary>
+    <p data-lang="en">Close and reopen the game while connected to the internet. If it still hasn't arrived, email us with your purchase receipt.</p>
+    <p data-lang="tr">İnternete bağlıyken oyunu kapatıp yeniden aç. Hâlâ gelmediyse satın alma makbuzunla bize e-posta at.</p>
+  </details>
+
+  <details>
+    <summary><span data-lang="en">A rewarded video didn't give a reward.</span><span data-lang="tr">Reklam izledim ama ödül gelmedi.</span></summary>
+    <p data-lang="en">Rewards are given only when the video is watched to the end. If no video is available, try again a bit later.</p>
+    <p data-lang="tr">Ödül, video sonuna kadar izlenince verilir. Video yoksa biraz sonra tekrar dene.</p>
+  </details>
+
+  <details>
+    <summary><span data-lang="en">How do I keep my progress on a new phone?</span><span data-lang="tr">Yeni telefonda ilerlememi nasıl korurum?</span></summary>
+    <p data-lang="en">Sign in from Profile with Apple or Google on both devices. Your progress syncs to your account.</p>
+    <p data-lang="tr">Profil ekranından iki cihazda da Apple veya Google ile giriş yap. İlerlemen hesabına eşitlenir.</p>
+  </details>
+
+  <details>
+    <summary><span data-lang="en">How can I delete my data?</span><span data-lang="tr">Verilerimi nasıl silerim?</span></summary>
+    <p data-lang="en">Email us from the address above with the subject "Delete my data" and we'll remove it.</p>
+    <p data-lang="tr">Yukarıdaki adrese "Verilerimi sil" konusuyla e-posta at, verilerini silelim.</p>
+  </details>
+
+  <footer>© 2026 Dropmelo</footer>
+</main>
+<script>
+  (function () {
+    var root = document.documentElement;
+    function set(l) {
+      root.lang = l;
+      document.querySelectorAll('.lang button').forEach(function (b) {
+        b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false');
+      });
+      document.title = l === 'tr' ? 'Dropmelo Destek' : 'Dropmelo Support';
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    var nav = (navigator.language || 'en').toLowerCase();
+    set(saved || (nav.indexOf('tr') === 0 ? 'tr' : 'en'));
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        set(b.dataset.set);
+        try { localStorage.setItem('lang', b.dataset.set); } catch (e) {}
+      });
+    });
+  })();
+</script>
+</body>
+</html>
