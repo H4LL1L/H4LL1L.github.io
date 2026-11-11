@@ -2,30 +2,98 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Drop &amp; Merge</title>
+<meta name="description" content="Drop &amp; Merge mobile puzzle games: Dropmelo and Hidden Corner.">
+<meta name="theme-color" content="#7a3fd0">
+<link rel="icon" href="support/icon.png">
+<link rel="apple-touch-icon" href="support/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 48px auto; padding: 0 16px; line-height: 1.6; }
-  h2 { margin: 28px 0 6px; }
-  ul { padding-left: 20px; margin: 4px 0; }
+  :root { --bg:#fff7ef; --card:#fff; --text:#3b1d2c; --muted:#8a6576; --line:#f6dfe8; --cream:#fff3e0; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1a0d14; --card:#26131d; --text:#fbe9f1; --muted:#c79aaf; --line:#3c1e2d; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 "Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+  .hero { color:var(--cream); text-align:center; padding:calc(48px + env(safe-area-inset-top)) 16px 110px;
+    background: radial-gradient(90% 70% at 15% 0%, rgba(232,53,143,.9) 0%, transparent 70%), linear-gradient(135deg, #c4136f 0%, #a0279f 55%, #0e6f8f 130%); }
+  h1 { font:700 40px/1.1 "Fredoka",sans-serif; margin:0; }
+  .tag { margin:10px 0 0; opacity:.9; font-weight:600; }
+  .lang { display:inline-flex; background:rgba(255,255,255,.16); border-radius:999px; padding:4px; margin-top:22px; }
+  .lang button { font:700 13px "Fredoka",sans-serif; border:0; cursor:pointer; color:var(--cream); background:transparent; padding:6px 14px; border-radius:999px; }
+  .lang button[aria-pressed="true"] { background:var(--cream); color:#c4136f; }
+  main { max-width:760px; margin:-70px auto 0; padding:0 16px calc(40px + env(safe-area-inset-bottom)); display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
+  .card { --c1:#c4136f; --c2:#e8358f; --deep:#8e0b52; --shadow:rgba(142,11,82,.35);
+    background:var(--card); border:1px solid var(--line); border-radius:26px; padding:24px 22px; box-shadow:0 18px 40px -18px var(--shadow); }
+  .card.hc { --c1:#0e6f8f; --c2:#1596bd; --deep:#0a4d65; --shadow:rgba(14,80,110,.45); }
+  .head { display:flex; align-items:center; gap:14px; margin-bottom:14px; }
+  .head img { width:64px; height:64px; border-radius:16px; box-shadow:0 10px 20px -8px rgba(0,0,0,.45); }
+  h2 { font:700 24px/1.1 "Fredoka",sans-serif; margin:0; color:var(--c2); }
+  .head p { margin:2px 0 0; color:var(--muted); font-size:14px; font-weight:600; }
+  .links { display:grid; gap:8px; }
+  .links a { display:flex; justify-content:space-between; align-items:center; text-decoration:none; color:var(--text); font-weight:700;
+    padding:12px 14px; border-radius:14px; border:1px solid var(--line); transition:transform .12s, border-color .12s, background .12s; }
+  .links a::after { content:"›"; color:var(--c2); font:700 20px "Fredoka",sans-serif; }
+  .links a:hover, .links a:focus-visible { border-color:var(--c2); transform:translateY(-1px); outline:none; }
+  .links a.primary { color:#fff; border:0; background:linear-gradient(180deg,var(--c2),var(--c1)); box-shadow:0 4px 0 var(--deep); }
+  .links a.primary::after { color:#fff; }
+  footer { text-align:center; color:var(--muted); font-size:14px; padding-bottom:calc(32px + env(safe-area-inset-bottom)); }
+  .tr { display:none; }
+  html[lang="tr"] .tr { display:inline; }
+  html[lang="tr"] .en { display:none; }
 </style>
 </head>
 <body>
-<h1>Drop &amp; Merge</h1>
-<p>Mobil bulmaca oyunları. / Mobile puzzle games.</p>
+<header class="hero">
+  <h1>Drop &amp; Merge</h1>
+  <p class="tag"><span class="en">Mobile puzzle games</span><span class="tr">Mobil bulmaca oyunları</span></p>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-l="en" aria-pressed="true">EN</button>
+    <button type="button" data-l="tr" aria-pressed="false">TR</button>
+  </div>
+</header>
 
-<h2>Dropmelo</h2>
-<ul>
-  <li><a href="dropmelo/privacy/">Privacy Policy / Gizlilik Politikası</a></li>
-  <li><a href="dropmelo/terms/">Terms of Use / Kullanım Koşulları</a></li>
-  <li><a href="dropmelo/support/">Support / Destek</a></li>
-</ul>
+<main>
+  <section class="card">
+    <div class="head">
+      <img src="support/icon.png" alt="Dropmelo">
+      <div><h2>Dropmelo</h2><p><span class="en">Drop, merge, beat your record</span><span class="tr">Düşür, birleştir, rekor kır</span></p></div>
+    </div>
+    <nav class="links">
+      <a href="dropmelo/support/"><span class="en">Support</span><span class="tr">Destek</span></a>
+      <a href="dropmelo/privacy/"><span class="en">Privacy Policy</span><span class="tr">Gizlilik Politikası</span></a>
+      <a href="dropmelo/terms/"><span class="en">Terms of Use</span><span class="tr">Kullanım Koşulları</span></a>
+    </nav>
+  </section>
 
-<h2>Hidden Corner</h2>
-<ul>
-  <li><a href="hidden-corner/privacy/">Privacy Policy / Gizlilik Politikası</a></li>
-  <li><a href="hidden-corner/terms/">Terms of Use / Kullanım Koşulları</a></li>
-  <li><a href="hidden-corner/support/">Support / Destek</a></li>
-</ul>
+  <section class="card hc">
+    <div class="head">
+      <img src="support/hidden-corner.png" alt="Hidden Corner">
+      <div><h2>Hidden Corner</h2><p><span class="en">Find the hidden objects</span><span class="tr">Gizli nesneleri bul</span></p></div>
+    </div>
+    <nav class="links">
+      <a href="hidden-corner/support/"><span class="en">Support</span><span class="tr">Destek</span></a>
+      <a href="hidden-corner/privacy/"><span class="en">Privacy Policy</span><span class="tr">Gizlilik Politikası</span></a>
+      <a href="hidden-corner/terms/"><span class="en">Terms of Use</span><span class="tr">Kullanım Koşulları</span></a>
+    </nav>
+  </section>
+</main>
+<footer>© Drop &amp; Merge</footer>
+
+<script>
+  (function () {
+    var btns = document.querySelectorAll('.lang button');
+    function set(l) {
+      document.documentElement.lang = l;
+      btns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.l === l ? 'true' : 'false'); });
+      try { localStorage.setItem('lang', l); } catch (e) {}
+    }
+    btns.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.l); }); });
+    var l = 'en';
+    try { l = localStorage.getItem('lang') || ((navigator.language || '').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en'); } catch (e) {}
+    set(l);
+  })();
+</script>
 </body>
 </html>
