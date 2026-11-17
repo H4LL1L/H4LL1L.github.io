@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hidden Corner Support</title>
-<meta name="description" content="Help and contact for Hidden Corner (English and Turkish).">
+<meta name="description" content="Help and contact for Hidden Corner.">
 <meta name="theme-color" content="#0e6f8f">
 <link rel="icon" href="../../support/hidden-corner.png">
 <link rel="apple-touch-icon" href="../../support/hidden-corner.png">
@@ -13,73 +13,92 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root { --c1:#0e6f8f; --c2:#1596bd; --cream:#fff6dc; --bg:#f3f9fb; --card:#fff; --text:#12303b; --muted:#587783; --line:#d6e9ef; --deep:#0a4d65; --shadow:rgba(14,80,110,.35); }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b1a20; --card:#122832; --text:#e3f2f7; --muted:#8fb3bf; --line:#1f3f4c; } }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 "Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
-  .hero { color:var(--cream); text-align:center; padding:calc(24px + env(safe-area-inset-top)) 16px 90px;
-    background: linear-gradient(135deg, #0e6f8f 0%, #134f7d 60%, #1b3a6b 100%); }
-  .hero img { width:84px; height:84px; border-radius:20px; display:block; margin:0 auto 12px; box-shadow:0 14px 28px -10px rgba(0,0,0,.5); }
+  .hero { color:var(--cream); text-align:center; padding:calc(20px + env(safe-area-inset-top)) 16px 90px;
+    background: radial-gradient(90% 70% at 15% 0%, rgba(21,150,189,.9) 0%, transparent 70%), linear-gradient(135deg, #0e6f8f 0%, #134f7d 60%, #1b3a6b 100%); }
+  .topbar { max-width:720px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
+  .back { color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; opacity:.9; }
+  .lang { display:inline-flex; background:rgba(255,255,255,.16); border-radius:999px; padding:4px; }
+  .lang button { font:700 13px "Fredoka",sans-serif; border:0; cursor:pointer; color:var(--cream); background:transparent; padding:6px 14px; border-radius:999px; }
+  .lang button[aria-pressed="true"] { background:var(--cream); color:var(--c1); }
+  .hero img { width:84px; height:84px; border-radius:20px; margin:22px auto 12px; display:block; box-shadow:0 14px 28px -10px rgba(0,0,0,.5); }
   h1 { font:700 32px/1.15 "Fredoka",sans-serif; margin:0; }
-  .updated { opacity:.9; font-weight:600; margin:6px 0 0; }
-  .nav { margin-top:14px; font-size:14px; font-weight:700; }
-  .nav a { color:var(--cream); margin:0 8px; }
-  main { max-width:720px; margin:-60px auto 0; padding:0 16px calc(48px + env(safe-area-inset-bottom)); display:grid; gap:20px; }
+  .updated { opacity:.85; font-weight:600; margin:6px 0 0; }
+  main { max-width:720px; margin:-60px auto 0; padding:0 16px calc(48px + env(safe-area-inset-bottom)); }
   article { background:var(--card); border:1px solid var(--line); border-radius:26px; padding:26px 22px; box-shadow:0 18px 40px -18px var(--shadow); }
-  h2 { font:700 26px "Fredoka",sans-serif; margin:0 0 6px; color:var(--c1); }
-  h3 { font:700 18px "Fredoka",sans-serif; margin:24px 0 4px; color:var(--c2); }
+  h2 { font:700 19px "Fredoka",sans-serif; margin:26px 0 6px; color:var(--c2); }
+  h2:first-child { margin-top:0; }
   p, li { color:var(--text); }
   ul { padding-left:20px; margin:8px 0; }
   li { margin:4px 0; }
   a { color:var(--c2); }
+  footer { text-align:center; margin-top:30px; color:var(--muted); font-size:14px; }
+  footer a { color:inherit; }
   .btn { display:inline-block; text-decoration:none; font:700 17px "Fredoka",sans-serif; color:#fff; padding:14px 26px; border-radius:16px;
-    background:linear-gradient(180deg,var(--c2),var(--c1)); box-shadow:0 5px 0 var(--deep); margin-top:6px; }
-  footer { text-align:center; color:var(--muted); font-size:14px; padding-bottom:calc(24px + env(safe-area-inset-bottom)); }
-  footer a { color:var(--muted); }
+    background:linear-gradient(180deg,var(--c2),var(--c1)); box-shadow:0 5px 0 var(--deep); }
+  .center { text-align:center; }
+  details { border:1px solid var(--line); border-radius:16px; margin:10px 0; padding:0 16px; }
+  summary { cursor:pointer; font-weight:700; padding:14px 0; }
+  details p { margin:0 0 14px; color:var(--muted); }
+  [data-lang] { display:none; }
+  html[lang="en"] [data-lang="en"], html[lang="tr"] [data-lang="tr"] { display:revert; }
 </style>
 </head>
 <body>
-<header class="hero" id="top">
+<header class="hero">
+  <div class="topbar">
+    <a class="back" href="../../"><span data-lang="en">← Home</span><span data-lang="tr">← Ana sayfa</span></a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set="en">EN</button><button type="button" data-set="tr">TR</button>
+    </div>
+  </div>
   <img src="../../support/hidden-corner.png" alt="Hidden Corner">
-  <h1>Support</h1>
-  <p class="updated">Hidden Corner · Help and contact</p>
-  <nav class="nav"><a href="#en">English</a> · <a href="#tr">Türkçe</a> · <a href="../privacy/">Privacy</a></nav>
+  <h1 data-lang="en">Player Support</h1>
+  <h1 data-lang="tr">Oyuncu Desteği</h1>
+  <p class="updated" data-lang="en">Hidden Corner · Help &amp; contact</p>
+  <p class="updated" data-lang="tr">Hidden Corner · Yardım ve iletişim</p>
 </header>
-
 <main>
-<article id="en">
-  <h2>Hidden Corner</h2>
-  <p>Hidden Corner is a hidden-object game: find the hidden items in each illustrated scene.</p>
-
-  <h3>Contact</h3>
-  <p>Write to us with your device model, OS version and a short description of the problem. A screenshot helps a lot. We reply in English or Turkish.</p>
-  <p><a class="btn" href="mailto:ihalildemircioglu@gmail.com?subject=Hidden%20Corner%20Support">Email support</a></p>
-
-  <h3>Frequently asked questions</h3>
-  <p><strong>How do I restore purchases?</strong><br>Open <em>Shop</em> in the game and tap <em>Restore purchases</em>.</p>
-  <p><strong>My progress is gone. What can I do?</strong><br>On iPhone, progress can be restored through iCloud when you use the same Apple ID. Make sure iCloud is turned on for the device. Progress is kept on your device; there is no account to sign in to.</p>
-  <p><strong>How do I remove ads?</strong><br>Buy <em>Remove Ads</em> in the Shop. Then tap <em>Restore purchases</em> on a new device to get it back.</p>
-  <p><strong>How do I change my ad and privacy choices?</strong><br>In the game, open <em>Settings &gt; Privacy options</em>. On iPhone you can also change the tracking permission in the iOS Settings app.</p>
-  <p><strong>Is the game playable offline?</strong><br>Yes. You can play without an internet connection.</p>
-  <p>For how data is handled, see the <a href="../privacy/">Privacy Policy</a>.</p>
+<article id="en" data-lang="en">
+<div class="center"><p>Hidden Corner is a hidden-object game: find the hidden items in each illustrated scene.</p><p>Write to us with your device model, OS version and a short description of the problem. A screenshot helps a lot. We reply in English or Turkish.</p><p><a class="btn" href="mailto:ihalildemircioglu@gmail.com?subject=Hidden%20Corner%20Support">Email support</a></p><p><a href="mailto:ihalildemircioglu@gmail.com">ihalildemircioglu@gmail.com</a></p></div><h2>Common questions</h2><details><summary>Is the game playable offline?</summary><p>Yes. You can play without an internet connection. Analytics and purchases need internet.</p></details>
+<details><summary>How do I restore purchases?</summary><p>Open <em>Shop</em> in the game and tap <em>Restore purchases</em>. Use the same Apple ID or Google account as the original purchase.</p></details>
+<details><summary>I bought something but it didn't appear</summary><p>Reopen the game while connected to the internet, then tap <em>Restore purchases</em> in the Shop. Still missing? Email us with your purchase receipt.</p></details>
+<details><summary>My progress is gone. What can I do?</summary><p>On iPhone, progress can be restored through iCloud when you use the same Apple ID. Make sure iCloud is turned on for the device. Progress is kept on your device; there is no account to sign in to.</p></details>
+<details><summary>How do I remove ads?</summary><p>Buy <em>Remove Ads</em> in the Shop. Then tap <em>Restore purchases</em> on a new device to get it back.</p></details>
+<details><summary>How do I change my ad and privacy choices?</summary><p>In the game, open <em>Settings &gt; Privacy options</em>. On iPhone you can also change the tracking permission in the iOS Settings app.</p></details>
+<details><summary>Deleting my data</summary><p>Uninstalling the game removes the data stored on your device. To ask us to delete analytics data or purchase records, email us with the subject "Delete my data" and your device model. See the <a href="../privacy/">Privacy Policy</a>.</p></details>
 </article>
-
-<article id="tr">
-  <h2>Hidden Corner</h2>
-  <p>Hidden Corner bir gizli nesne oyunudur: her resimli sahnede gizlenmiş eşyaları bul.</p>
-
-  <h3>İletişim</h3>
-  <p>Cihaz modelini, işletim sistemi sürümünü ve sorunu kısaca yaz. Ekran görüntüsü eklersen çok yardımcı olur. Türkçe veya İngilizce yanıtlıyoruz.</p>
-  <p><a class="btn" href="mailto:ihalildemircioglu@gmail.com?subject=Hidden%20Corner%20Destek">Destek e-postası gönder</a></p>
-
-  <h3>Sık sorulan sorular</h3>
-  <p><strong>Satın alımlarımı nasıl geri yüklerim?</strong><br>Oyunda <em>Mağaza</em>'yı aç ve <em>Satın alımları geri yükle</em> seçeneğine dokun.</p>
-  <p><strong>İlerlemem kayboldu, ne yapabilirim?</strong><br>iPhone'da aynı Apple Kimliği ile giriş yaptığında ilerleme iCloud üzerinden geri yüklenebilir. Cihazında iCloud'un açık olduğundan emin ol. İlerleme cihazında saklanır; giriş yapılacak bir hesap yoktur.</p>
-  <p><strong>Reklamları nasıl kaldırırım?</strong><br>Mağazadan <em>Reklamları Kaldır</em> satın alımını yap. Yeni bir cihazda almak için <em>Satın alımları geri yükle</em> seçeneğini kullan.</p>
-  <p><strong>Reklam ve gizlilik tercihlerimi nasıl değiştiririm?</strong><br>Oyunda <em>Ayarlar &gt; Gizlilik seçenekleri</em> bölümünü aç. iPhone'da takip iznini iOS Ayarlar uygulamasından da değiştirebilirsin.</p>
-  <p><strong>Oyun internetsiz oynanabilir mi?</strong><br>Evet. İnternet bağlantısı olmadan oynayabilirsin.</p>
-  <p>Verilerin nasıl işlendiği için <a href="../privacy/">Gizlilik Politikası</a>na bak.</p>
+<article id="tr" data-lang="tr">
+<div class="center"><p>Hidden Corner bir gizli nesne oyunudur: her resimli sahnede gizlenmiş eşyaları bul.</p><p>Cihaz modelini, işletim sistemi sürümünü ve sorunu kısaca yaz. Ekran görüntüsü eklersen çok yardımcı olur. Türkçe veya İngilizce yanıtlıyoruz.</p><p><a class="btn" href="mailto:ihalildemircioglu@gmail.com?subject=Hidden%20Corner%20Destek">Destek e-postası gönder</a></p><p><a href="mailto:ihalildemircioglu@gmail.com">ihalildemircioglu@gmail.com</a></p></div><h2>Sık sorulanlar</h2><details><summary>Oyun internetsiz oynanabilir mi?</summary><p>Evet. İnternet bağlantısı olmadan oynayabilirsin. Analiz ve satın almalar için internet gerekir.</p></details>
+<details><summary>Satın alımlarımı nasıl geri yüklerim?</summary><p>Oyunda <em>Mağaza</em>'yı aç ve <em>Satın alımları geri yükle</em> seçeneğine dokun. Orijinal satın almada kullandığın Apple Kimliği veya Google hesabını kullan.</p></details>
+<details><summary>Bir şey satın aldım ama görünmüyor</summary><p>İnternete bağlıyken oyunu yeniden aç, sonra Mağaza'da <em>Satın alımları geri yükle</em> seçeneğine dokun. Hâlâ gelmediyse satın alma makbuzunla bize e-posta at.</p></details>
+<details><summary>İlerlemem kayboldu, ne yapabilirim?</summary><p>iPhone'da aynı Apple Kimliği ile giriş yaptığında ilerleme iCloud üzerinden geri yüklenebilir. Cihazında iCloud'un açık olduğundan emin ol. İlerleme cihazında saklanır; giriş yapılacak bir hesap yoktur.</p></details>
+<details><summary>Reklamları nasıl kaldırırım?</summary><p>Mağazadan <em>Reklamları Kaldır</em> satın alımını yap. Yeni bir cihazda almak için <em>Satın alımları geri yükle</em> seçeneğini kullan.</p></details>
+<details><summary>Reklam ve gizlilik tercihlerimi nasıl değiştiririm?</summary><p>Oyunda <em>Ayarlar &gt; Gizlilik seçenekleri</em> bölümünü aç. iPhone'da takip iznini iOS Ayarlar uygulamasından da değiştirebilirsin.</p></details>
+<details><summary>Verilerimi silmek</summary><p>Oyunu silmek, cihazında saklanan verileri kaldırır. Analiz verilerinin veya satın alma kayıtlarının silinmesini istersen "Verilerimi sil" konusuyla ve cihaz modelinle bize e-posta at. <a href="../privacy/">Gizlilik Politikası</a>'na bak.</p></details>
 </article>
+<footer><a href="../privacy/"><span data-lang="en">Privacy Policy</span><span data-lang="tr">Gizlilik Politikası</span></a> · <a href="../terms/"><span data-lang="en">Terms of Use</span><span data-lang="tr">Kullanım Koşulları</span></a><br>© 2026 Hidden Corner</footer>
 </main>
-
-<footer>© 2026 Hidden Corner · <a href="../privacy/">Privacy / Gizlilik</a> · <a href="../../">Home / Ana sayfa</a></footer>
+<script>
+(function () {
+  var root = document.documentElement;
+  var T = {en: 'Hidden Corner Support', tr: 'Hidden Corner Destek'};
+  function set(l) {
+    root.lang = l;
+    document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false'); });
+    document.title = T[l];
+  }
+  var saved = null; try { saved = localStorage.getItem('lang'); } catch (e) {}
+  var nav = (navigator.language || 'en').toLowerCase();
+  var h = (location.hash || '').replace('#', '');
+  set(h === 'en' || h === 'tr' ? h : (saved || (nav.indexOf('tr') === 0 ? 'tr' : 'en')));
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.addEventListener('click', function () { set(b.dataset.set); try { localStorage.setItem('lang', b.dataset.set); } catch (e) {} });
+  });
+  window.addEventListener('hashchange', function () { var x = location.hash.replace('#', ''); if (x === 'en' || x === 'tr') set(x); });
+})();
+</script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hidden Corner Privacy Policy</title>
-<meta name="description" content="Privacy policy for the Hidden Corner mobile game (English and Turkish).">
+<meta name="description" content="Privacy policy for the Hidden Corner mobile game.">
 <meta name="theme-color" content="#0e6f8f">
 <link rel="icon" href="../../support/hidden-corner.png">
 <link rel="apple-touch-icon" href="../../support/hidden-corner.png">
@@ -13,110 +13,206 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root { --c1:#0e6f8f; --c2:#1596bd; --cream:#fff6dc; --bg:#f3f9fb; --card:#fff; --text:#12303b; --muted:#587783; --line:#d6e9ef; --deep:#0a4d65; --shadow:rgba(14,80,110,.35); }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b1a20; --card:#122832; --text:#e3f2f7; --muted:#8fb3bf; --line:#1f3f4c; } }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 "Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
-  .hero { color:var(--cream); text-align:center; padding:calc(24px + env(safe-area-inset-top)) 16px 90px;
-    background: linear-gradient(135deg, #0e6f8f 0%, #134f7d 60%, #1b3a6b 100%); }
-  .hero img { width:84px; height:84px; border-radius:20px; display:block; margin:0 auto 12px; box-shadow:0 14px 28px -10px rgba(0,0,0,.5); }
+  .hero { color:var(--cream); text-align:center; padding:calc(20px + env(safe-area-inset-top)) 16px 90px;
+    background: radial-gradient(90% 70% at 15% 0%, rgba(21,150,189,.9) 0%, transparent 70%), linear-gradient(135deg, #0e6f8f 0%, #134f7d 60%, #1b3a6b 100%); }
+  .topbar { max-width:720px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
+  .back { color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; opacity:.9; }
+  .lang { display:inline-flex; background:rgba(255,255,255,.16); border-radius:999px; padding:4px; }
+  .lang button { font:700 13px "Fredoka",sans-serif; border:0; cursor:pointer; color:var(--cream); background:transparent; padding:6px 14px; border-radius:999px; }
+  .lang button[aria-pressed="true"] { background:var(--cream); color:var(--c1); }
+  .hero img { width:84px; height:84px; border-radius:20px; margin:22px auto 12px; display:block; box-shadow:0 14px 28px -10px rgba(0,0,0,.5); }
   h1 { font:700 32px/1.15 "Fredoka",sans-serif; margin:0; }
-  .updated { opacity:.9; font-weight:600; margin:6px 0 0; }
-  .nav { margin-top:14px; font-size:14px; font-weight:700; }
-  .nav a { color:var(--cream); margin:0 8px; }
-  main { max-width:720px; margin:-60px auto 0; padding:0 16px calc(48px + env(safe-area-inset-bottom)); display:grid; gap:20px; }
+  .updated { opacity:.85; font-weight:600; margin:6px 0 0; }
+  main { max-width:720px; margin:-60px auto 0; padding:0 16px calc(48px + env(safe-area-inset-bottom)); }
   article { background:var(--card); border:1px solid var(--line); border-radius:26px; padding:26px 22px; box-shadow:0 18px 40px -18px var(--shadow); }
-  h2 { font:700 26px "Fredoka",sans-serif; margin:0 0 6px; color:var(--c1); }
-  h3 { font:700 18px "Fredoka",sans-serif; margin:24px 0 4px; color:var(--c2); }
+  h2 { font:700 19px "Fredoka",sans-serif; margin:26px 0 6px; color:var(--c2); }
+  h2:first-child { margin-top:0; }
   p, li { color:var(--text); }
   ul { padding-left:20px; margin:8px 0; }
   li { margin:4px 0; }
   a { color:var(--c2); }
-  .small { color:var(--muted); font-size:14px; }
-  footer { text-align:center; color:var(--muted); font-size:14px; padding-bottom:calc(24px + env(safe-area-inset-bottom)); }
-  footer a { color:var(--muted); }
+  footer { text-align:center; margin-top:30px; color:var(--muted); font-size:14px; }
+  footer a { color:inherit; }
+  .btn { display:inline-block; text-decoration:none; font:700 17px "Fredoka",sans-serif; color:#fff; padding:14px 26px; border-radius:16px;
+    background:linear-gradient(180deg,var(--c2),var(--c1)); box-shadow:0 5px 0 var(--deep); }
+  .center { text-align:center; }
+  details { border:1px solid var(--line); border-radius:16px; margin:10px 0; padding:0 16px; }
+  summary { cursor:pointer; font-weight:700; padding:14px 0; }
+  details p { margin:0 0 14px; color:var(--muted); }
+  [data-lang] { display:none; }
+  html[lang="en"] [data-lang="en"], html[lang="tr"] [data-lang="tr"] { display:revert; }
 </style>
 </head>
 <body>
-<header class="hero" id="top">
+<header class="hero">
+  <div class="topbar">
+    <a class="back" href="../../"><span data-lang="en">← Home</span><span data-lang="tr">← Ana sayfa</span></a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set="en">EN</button><button type="button" data-set="tr">TR</button>
+    </div>
+  </div>
   <img src="../../support/hidden-corner.png" alt="Hidden Corner">
-  <h1>Privacy Policy</h1>
-  <p class="updated">Hidden Corner · 17 November 2026</p>
-  <nav class="nav"><a href="#en">English</a> · <a href="#tr">Türkçe</a> · <a href="../support/">Support</a></nav>
+  <h1 data-lang="en">Privacy Policy</h1>
+  <h1 data-lang="tr">Gizlilik Politikası</h1>
+  <p class="updated" data-lang="en">Hidden Corner · Last updated: November 17, 2026</p>
+  <p class="updated" data-lang="tr">Hidden Corner · Son güncelleme: 17 Kasım 2026</p>
 </header>
-
 <main>
-<article id="en">
-  <h2>Privacy Policy</h2>
-  <p class="small">Effective date: 17 November 2026</p>
+<article id="en" data-lang="en">
 
-  <p>Hidden Corner is a hidden-object game made by the Hidden Corner team ("we"). There is no account and no sign-in. The game works offline.</p>
+  <h2>Overview</h2>
+  <p>This policy explains what data Hidden Corner collects, why, and how third-party services process it. Hidden Corner is a hidden-object game made by the Hidden Corner team ("we"). There is no account and no sign-in, and the game does not ask for your name, email address, phone number or home address. The game works offline.</p>
 
-  <h3>Advertising</h3>
-  <p>The game shows ads from Google AdMob. To show and measure ads, AdMob may collect device identifiers (IDFA on iOS or the Advertising ID on Android), an approximate location derived from your IP address, and data about how you interact with ads.</p>
+  <h2>Data we collect</h2>
+  <ul>
+    <li><strong>Advertising identifiers:</strong> the IDFA on iOS or the Advertising ID on Android, used by the ad SDK to show and measure ads, but only as allowed by your tracking choice.</li>
+    <li><strong>Approximate location:</strong> a rough location derived from your IP address, used by AdMob to serve ads.</li>
+    <li><strong>Ad interaction data:</strong> how you interact with ads.</li>
+    <li><strong>Gameplay analytics:</strong> anonymous events such as levels started and finished, app version, device model, language and country. Each player is identified by a random ID, not by name or email.</li>
+    <li><strong>Purchase records:</strong> which items you bought, so that purchases can be restored. Payments are handled by Apple or Google; we never see your card or payment details.</li>
+    <li><strong>Progress on iOS (optional):</strong> your progress may be stored in your own iCloud through Apple's key-value storage.</li>
+  </ul>
+
+  <h2>How we use data</h2>
+  <ul>
+    <li>To show and measure ads.</li>
+    <li>To understand how the game is played and to improve it.</li>
+    <li>To deliver purchases and restore them.</li>
+    <li>To keep your progress on iOS through your iCloud account.</li>
+  </ul>
+
+  <h2>Advertising and tracking</h2>
+  <p>The game shows ads through Google AdMob. To show and measure ads, AdMob may collect device identifiers, an approximate location derived from your IP address, and data about how you interact with ads.</p>
   <ul>
     <li><strong>iOS:</strong> we ask for permission through Apple's App Tracking Transparency prompt. If you decline, ads are not personalized.</li>
     <li><strong>EEA and UK:</strong> we show Google's consent form (UMP). You can change your choice at any time in the game under <em>Settings &gt; Privacy options</em>.</li>
   </ul>
   <p>Google's policy: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">https://policies.google.com/technologies/partner-sites</a></p>
 
-  <h3>Analytics</h3>
-  <p>After the consent step, the game sends anonymous gameplay events to Firebase Analytics and to our own Supabase database. The events include levels started and finished, app version, device model, and language and country. Each player is identified by a random ID, not by name or email.</p>
+  <h2>Analytics</h2>
+  <p>After the consent step, the game sends anonymous gameplay events to Firebase Analytics and to our own Supabase database.</p>
 
-  <h3>Purchases</h3>
-  <p>Purchases are handled by the Apple App Store or Google Play. We never see your card or payment details. We keep a record of what you bought so that purchases can be restored.</p>
+  <h2>Third-party services</h2>
+  <ul>
+    <li><a href="https://policies.google.com/privacy">Google AdMob</a> – ads</li>
+    <li><a href="https://firebase.google.com/support/privacy">Firebase Analytics</a> – analytics</li>
+    <li><a href="https://supabase.com/privacy">Supabase</a> – analytics storage</li>
+    <li>App Store and Google Play billing – purchases</li>
+    <li>Apple iCloud key-value storage – progress save on iOS</li>
+  </ul>
+  <p>These services process data under their own privacy policies and may transfer data internationally.</p>
 
-  <h3>Cloud save</h3>
-  <p>On iOS, your progress may be stored in your own iCloud through Apple's key-value storage.</p>
+  <h2>Sharing</h2>
+  <p>Data is shared only with the service providers above and when required by law.</p>
 
-  <h3>Children</h3>
-  <p>The game is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
+  <h2>Retention</h2>
+  <p>Purchase records are kept so that purchases can be restored. Analytics data is kept only as long as needed to run, secure and improve the game.</p>
 
-  <h3>Deleting data</h3>
-  <p>Uninstalling the game removes the data stored on your device. To ask us to delete analytics data or purchase records linked to your random player ID, contact us through the <a href="../support/">Support page</a>.</p>
+  <h2>Your choices and data deletion</h2>
+  <p>You can play offline, deny tracking, and change your ad choices at any time under <em>Settings &gt; Privacy options</em> in the game. On iPhone you can also change the tracking permission in the iOS Settings app. Uninstalling the game removes the data stored on your device. To ask us to delete analytics data or purchase records linked to your random player ID, contact us through the <a href="../support/">Support page</a>.</p>
 
-  <h3>Changes to this policy</h3>
+  <h2>Children</h2>
+  <p>Hidden Corner is not directed at children under 13 and we do not knowingly collect personal information from children under 13. If you believe a child has provided data, contact us and we will delete it.</p>
+
+  <h2>Security</h2>
+  <p>We use reasonable technical measures to protect data, but no online service can be fully secure.</p>
+
+  <h2>Changes</h2>
   <p>We may update this policy. The date at the top shows the latest version.</p>
 
-  <h3>Contact</h3>
-  <p>Use the <a href="../support/">Support page</a>.</p>
+  <h2>Contact</h2>
+  <p>Hidden Corner team · <a href="mailto:ihalildemircioglu@gmail.com?subject=Hidden%20Corner%20-%20Privacy">ihalildemircioglu@gmail.com</a> · or use the <a href="../support/">Support page</a></p>
+
 </article>
+<article id="tr" data-lang="tr">
 
-<article id="tr">
-  <h2>Gizlilik Politikası</h2>
-  <p class="small">Yürürlük tarihi: 17 Kasım 2026</p>
+  <h2>Genel bakış</h2>
+  <p>Bu politika, Hidden Corner'ın hangi verileri neden topladığını ve üçüncü taraf hizmetlerin bunları nasıl işlediğini açıklar. Hidden Corner, Hidden Corner ekibi ("biz") tarafından yapılmış bir gizli nesne oyunudur. Hesap ve giriş yoktur; oyun adını, e-posta adresini, telefon numaranı veya ev adresini istemez. Oyun çevrimdışı çalışır.</p>
 
-  <p>Hidden Corner, Hidden Corner ekibi ("biz") tarafından yapılmış bir gizli nesne oyunudur. Hesap ve giriş yoktur. Oyun çevrimdışı çalışır.</p>
-
-  <h3>Reklamlar</h3>
-  <p>Oyun, Google AdMob reklamları gösterir. Reklamları göstermek ve ölçmek için AdMob; cihaz tanımlayıcılarını (iOS'ta IDFA, Android'de Reklam Kimliği), IP adresinden türetilen yaklaşık konumu ve reklamlarla etkileşim verilerini toplayabilir.</p>
+  <h2>Toplanan veriler</h2>
   <ul>
-    <li><strong>iOS:</strong> Apple'ın App Tracking Transparency penceresiyle izin isteriz. Reddederseniz reklamlar kişiselleştirilmez.</li>
-    <li><strong>AB/EEA ve Birleşik Krallık:</strong> Google'ın onay formunu (UMP) gösteririz. Tercihinizi oyunda <em>Ayarlar &gt; Gizlilik seçenekleri</em> altından istediğiniz zaman değiştirebilirsiniz.</li>
+    <li><strong>Reklam tanımlayıcıları:</strong> iOS'ta IDFA, Android'de Reklam Kimliği; reklam SDK'sı tarafından reklamları göstermek ve ölçmek için kullanılır, yalnızca takip tercihine uygun olarak.</li>
+    <li><strong>Yaklaşık konum:</strong> IP adresinden türetilen kaba bir konum; AdMob tarafından reklam sunmak için kullanılır.</li>
+    <li><strong>Reklam etkileşim verileri:</strong> reklamlarla nasıl etkileşim kurduğun.</li>
+    <li><strong>Oyun analizi:</strong> başlatılan ve tamamlanan bölümler, uygulama sürümü, cihaz modeli, dil ve ülke gibi anonim olaylar. Her oyuncu, ad veya e-posta yerine rastgele bir kimlikle temsil edilir.</li>
+    <li><strong>Satın alma kayıtları:</strong> satın alımların geri yüklenebilmesi için hangi ürünleri satın aldığın. Ödemeyi Apple veya Google yürütür; kart veya ödeme bilgilerini hiçbir zaman görmeyiz.</li>
+    <li><strong>iOS'ta ilerleme (isteğe bağlı):</strong> ilerlemen, Apple'ın anahtar-değer depolaması üzerinden kendi iCloud hesabında saklanabilir.</li>
+  </ul>
+
+  <h2>Verileri nasıl kullanıyoruz</h2>
+  <ul>
+    <li>Reklam göstermek ve ölçmek için.</li>
+    <li>Oyunun nasıl oynandığını anlamak ve geliştirmek için.</li>
+    <li>Satın almaları teslim etmek ve geri yüklemek için.</li>
+    <li>iOS'ta ilerlemeni iCloud hesabınla korumak için.</li>
+  </ul>
+
+  <h2>Reklamlar ve takip</h2>
+  <p>Oyunda Google AdMob ile reklam gösterilir. Reklamları göstermek ve ölçmek için AdMob; cihaz tanımlayıcılarını, IP adresinden türetilen yaklaşık konumu ve reklamlarla etkileşim verilerini toplayabilir.</p>
+  <ul>
+    <li><strong>iOS:</strong> Apple'ın App Tracking Transparency penceresiyle izin isteriz. Reddedersen reklamlar kişiselleştirilmez.</li>
+    <li><strong>AB/EEA ve Birleşik Krallık:</strong> Google'ın onay formunu (UMP) gösteririz. Tercihini oyunda <em>Ayarlar &gt; Gizlilik seçenekleri</em> altından istediğin zaman değiştirebilirsin.</li>
   </ul>
   <p>Google politikası: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">https://policies.google.com/technologies/partner-sites</a></p>
 
-  <h3>Analiz</h3>
-  <p>Onay adımından sonra oyun, anonim oyun olaylarını Firebase Analytics'e ve kendi Supabase veritabanımıza gönderir. Olaylar; başlatılan ve tamamlanan bölümler, uygulama sürümü, cihaz modeli, dil ve ülkeyi içerir. Her oyuncu, ad veya e-posta yerine rastgele bir kimlikle temsil edilir.</p>
+  <h2>Analiz</h2>
+  <p>Onay adımından sonra oyun, anonim oyun olaylarını Firebase Analytics'e ve kendi Supabase veritabanımıza gönderir.</p>
 
-  <h3>Satın almalar</h3>
-  <p>Satın almalar Apple App Store veya Google Play tarafından yürütülür. Kart veya ödeme bilgilerinizi biz görmeyiz. Satın alımların geri yüklenebilmesi için neyi satın aldığınıza dair bir kayıt tutarız.</p>
+  <h2>Üçüncü taraf hizmetler</h2>
+  <ul>
+    <li><a href="https://policies.google.com/privacy">Google AdMob</a> – reklamlar</li>
+    <li><a href="https://firebase.google.com/support/privacy">Firebase Analytics</a> – analiz</li>
+    <li><a href="https://supabase.com/privacy">Supabase</a> – analiz verilerinin depolanması</li>
+    <li>App Store ve Google Play ödeme sistemi – satın almalar</li>
+    <li>Apple iCloud anahtar-değer depolaması – iOS'ta ilerleme kaydı</li>
+  </ul>
+  <p>Bu hizmetler verileri kendi gizlilik politikalarına göre işler ve verileri yurt dışına aktarabilir.</p>
 
-  <h3>Bulut kaydı</h3>
-  <p>iOS'ta ilerlemeniz, Apple'ın anahtar-değer depolaması üzerinden kendi iCloud hesabınızda saklanabilir.</p>
+  <h2>Paylaşım</h2>
+  <p>Veriler yalnızca yukarıdaki hizmet sağlayıcılarla ve yasal zorunluluk olduğunda paylaşılır.</p>
 
-  <h3>Çocuklar</h3>
-  <p>Oyun 13 yaş altı çocuklara yönelik değildir. 13 yaş altı çocuklardan bilerek kişisel bilgi toplamayız.</p>
+  <h2>Saklama süresi</h2>
+  <p>Satın alma kayıtları, satın almaların geri yüklenebilmesi için tutulur. Analiz verileri yalnızca oyunu çalıştırmak, korumak ve geliştirmek için gereken süre kadar tutulur.</p>
 
-  <h3>Verilerin silinmesi</h3>
-  <p>Oyunu silmek, cihazınızda saklanan verileri kaldırır. Rastgele oyuncu kimliğinize bağlı analiz verilerinin veya satın alma kayıtlarının silinmesini istemek için <a href="../support/">Destek sayfası</a> üzerinden bize ulaşın.</p>
+  <h2>Seçimlerin ve veri silme</h2>
+  <p>İnternetsiz oynayabilir, takibi reddedebilir ve reklam tercihlerini oyunda <em>Ayarlar &gt; Gizlilik seçenekleri</em> altından istediğin zaman değiştirebilirsin. iPhone'da takip iznini iOS Ayarlar uygulamasından da değiştirebilirsin. Oyunu silmek, cihazında saklanan verileri kaldırır. Rastgele oyuncu kimliğine bağlı analiz verilerinin veya satın alma kayıtlarının silinmesini istersen <a href="../support/">Destek sayfası</a> üzerinden bize ulaşabilirsin.</p>
 
-  <h3>Politikadaki değişiklikler</h3>
+  <h2>Çocuklar</h2>
+  <p>Hidden Corner 13 yaş altındaki çocuklara yönelik değildir ve 13 yaş altı çocuklardan bilerek kişisel bilgi toplamayız. Bir çocuğun veri paylaştığını düşünüyorsan bize yaz, silelim.</p>
+
+  <h2>Güvenlik</h2>
+  <p>Verileri korumak için makul teknik önlemler alıyoruz, ancak hiçbir çevrimiçi hizmet tamamen güvenli değildir.</p>
+
+  <h2>Değişiklikler</h2>
   <p>Bu politikayı güncelleyebiliriz. En üstteki tarih en güncel sürümü gösterir.</p>
 
-  <h3>İletişim</h3>
-  <p><a href="../support/">Destek sayfası</a>nı kullanın.</p>
-</article>
-</main>
+  <h2>İletişim</h2>
+  <p>Hidden Corner ekibi · <a href="mailto:ihalildemircioglu@gmail.com?subject=Hidden%20Corner%20-%20Gizlilik">ihalildemircioglu@gmail.com</a> · veya <a href="../support/">Destek sayfası</a>nı kullan</p>
 
-<footer>© 2026 Hidden Corner · <a href="../support/">Support / Destek</a> · <a href="../../">Home / Ana sayfa</a></footer>
+</article>
+<footer><a href="../terms/"><span data-lang="en">Terms of Use</span><span data-lang="tr">Kullanım Koşulları</span></a> · <a href="../support/"><span data-lang="en">Support</span><span data-lang="tr">Destek</span></a><br>© 2026 Hidden Corner</footer>
+</main>
+<script>
+(function () {
+  var root = document.documentElement;
+  var T = {en: 'Hidden Corner Privacy Policy', tr: 'Hidden Corner Gizlilik Politikası'};
+  function set(l) {
+    root.lang = l;
+    document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false'); });
+    document.title = T[l];
+  }
+  var saved = null; try { saved = localStorage.getItem('lang'); } catch (e) {}
+  var nav = (navigator.language || 'en').toLowerCase();
+  var h = (location.hash || '').replace('#', '');
+  set(h === 'en' || h === 'tr' ? h : (saved || (nav.indexOf('tr') === 0 ? 'tr' : 'en')));
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.addEventListener('click', function () { set(b.dataset.set); try { localStorage.setItem('lang', b.dataset.set); } catch (e) {} });
+  });
+  window.addEventListener('hashchange', function () { var x = location.hash.replace('#', ''); if (x === 'en' || x === 'tr') set(x); });
+})();
+</script>
 </body>
 </html>
